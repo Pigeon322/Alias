@@ -8,21 +8,40 @@
 import SwiftUI
 
 struct MainView: View {
+    @StateObject private var viewModel = MainViewModel()
+
+    @State private var tagSelection: String? = nil
+    @State private var isPresentedChoosePlayersView = false
+
     var body: some View {
-        VStack(spacing: 0) {
-            playViewButton
-            
-            buttonsStack
+        NavigationStack {
+            VStack(spacing: 0) {
+                playViewButton
+                
+                buttonsStack
+            }
+            .frame(maxWidth: .infinity)
+            .frame(maxHeight: .infinity)
+            .background(.black)
+            .navigationDestination(for: $viewModel.destination) { destination in
+                switch destination {
+                case .choosePlayers:
+                    ChoosePlayersView()
+                case .rules:
+                    ChoosePlayersView()
+                case .settings:
+                    ChoosePlayersView()
+                default:
+                    ChoosePlayersView()
+                }
+            }
         }
-        .frame(maxWidth: .infinity)
-        .frame(maxHeight: .infinity)
-        .background(.black)
     }
     
     private var playViewButton: some View {
         VStack {
             Button {
-                
+                viewModel.destination = .choosePlayers
             } label: {
                 Text("Играть")
                     .foregroundStyle(.white)
@@ -49,7 +68,7 @@ struct MainView: View {
     private var rulesButton: some View {
         VStack {
             Button {
-                
+                viewModel.destination = .rules
             } label: {
                 Text("Правила")
                     .foregroundStyle(.white)
@@ -57,7 +76,7 @@ struct MainView: View {
                     .padding()
             }
             .frame(maxWidth: .infinity)
-            .background(.yellow)
+            .background(.red)
             .cornerRadius(15)
         }
     }
@@ -65,15 +84,15 @@ struct MainView: View {
     private var settingsButton: some View {
         VStack {
             Button {
-                
+                viewModel.destination = .settings
             } label: {
-                Text("Играть")
+                Text("Настройки")
                     .foregroundStyle(.white)
                     .bold()
                     .padding()
             }
             .frame(maxWidth: .infinity)
-            .background(.yellow)
+            .background(.red)
             .cornerRadius(15)
         }
     }

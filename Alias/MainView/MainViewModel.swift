@@ -9,5 +9,13 @@ import Foundation
 
 
 final class MainViewModel: ObservableObject {
-    
+    @Published var destination: Destination?
+}
+
+
+enum Destination: Equatable {
+    case choosePlayers
+    case rules
+    case settings
+    case category
 }
