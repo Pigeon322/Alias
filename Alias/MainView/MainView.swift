@@ -9,10 +9,14 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        VStack {
-           playViewButton
+        VStack(spacing: 0) {
+            playViewButton
+            
+            buttonsStack
         }
-        .padding()
+        .frame(maxWidth: .infinity)
+        .frame(maxHeight: .infinity)
+        .background(.black)
     }
     
     private var playViewButton: some View {
@@ -22,12 +26,58 @@ struct MainView: View {
             } label: {
                 Text("Играть")
                     .foregroundStyle(.white)
+                    .bold()
                     .padding()
             }
-            .background(Color.blue)
+            .frame(maxWidth: .infinity)
+            .background(.blue)
+            .cornerRadius(15)
+            .padding()
+        }
+    }
+    
+    private var buttonsStack: some View {
+        HStack(spacing: 10) {
+            rulesButton
+            
+            settingsButton
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.horizontal)
+    }
+    
+    private var rulesButton: some View {
+        VStack {
+            Button {
+                
+            } label: {
+                Text("Правила")
+                    .foregroundStyle(.white)
+                    .bold()
+                    .padding()
+            }
+            .frame(maxWidth: .infinity)
+            .background(.yellow)
             .cornerRadius(15)
         }
     }
+    
+    private var settingsButton: some View {
+        VStack {
+            Button {
+                
+            } label: {
+                Text("Играть")
+                    .foregroundStyle(.white)
+                    .bold()
+                    .padding()
+            }
+            .frame(maxWidth: .infinity)
+            .background(.yellow)
+            .cornerRadius(15)
+        }
+    }
+    
 }
 
 #Preview {
