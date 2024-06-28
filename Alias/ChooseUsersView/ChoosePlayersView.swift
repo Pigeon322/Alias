@@ -20,7 +20,9 @@ struct ChoosePlayersView: View {
             
             buttonsStack
             
-            continueButton
+            PlainButton(text: "Продолжить") {
+                viewModel.destination = .category
+            }
         }
         .frame(maxWidth: .infinity)
         .frame(maxHeight: .infinity)
@@ -28,7 +30,7 @@ struct ChoosePlayersView: View {
         .navigationDestination(for: $viewModel.destination) { destination in
             switch destination {
             case .category:
-                CategoryView(playersCount: viewModel.playersCount)
+                CategoryView() // TODO: - Нужно как-то прокидывать количество игроков
             default:
                 EmptyView()
             }
@@ -92,23 +94,6 @@ struct ChoosePlayersView: View {
                     .background(Color.green)
                     .clipShape(Circle())
             }
-        }
-    }
-    
-    private var continueButton: some View {
-        VStack {
-            Button {
-                viewModel.destination = .category
-            } label: {
-                Text("Продолжить")
-                    .foregroundStyle(.white)
-                    .bold()
-                    .padding()
-            }
-            .frame(maxWidth: .infinity)
-            .background(.blue)
-            .cornerRadius(15)
-            .padding()
         }
     }
 }

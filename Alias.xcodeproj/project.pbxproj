@@ -20,6 +20,9 @@
 		1E51BFB82C2D7A17007E283D /* NavigationDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51BFB72C2D7A17007E283D /* NavigationDestination.swift */; };
 		1E51BFBB2C2DAD1B007E283D /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51BFBA2C2DAD1B007E283D /* CategoryView.swift */; };
 		1E51BFBD2C2DAD27007E283D /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51BFBC2C2DAD27007E283D /* CategoryViewModel.swift */; };
+		1E51BFC02C2E9F3C007E283D /* PlainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51BFBF2C2E9F3C007E283D /* PlainButton.swift */; };
+		1E51BFC32C2EA1D4007E283D /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51BFC22C2EA1D4007E283D /* TeamView.swift */; };
+		1E51BFC52C2EA5C5007E283D /* TeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51BFC42C2EA5C5007E283D /* TeamViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 		1E51BFB72C2D7A17007E283D /* NavigationDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDestination.swift; sourceTree = "<group>"; };
 		1E51BFBA2C2DAD1B007E283D /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		1E51BFBC2C2DAD27007E283D /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		1E51BFBF2C2E9F3C007E283D /* PlainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainButton.swift; sourceTree = "<group>"; };
+		1E51BFC22C2EA1D4007E283D /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
+		1E51BFC42C2EA5C5007E283D /* TeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,13 +112,15 @@
 		1E1607122C2D40E40066CAB9 /* Alias */ = {
 			isa = PBXGroup;
 			children = (
-				1E51BFB92C2DAD08007E283D /* CategoryView */,
-				1E51BFB62C2D79F9007E283D /* Extensions */,
-				1E51BFB12C2D64B9007E283D /* ChooseUsersView */,
-				1E16073D2C2D41F60066CAB9 /* MainView */,
 				1E1607132C2D40E40066CAB9 /* AliasApp.swift */,
 				1E1607172C2D40E50066CAB9 /* Assets.xcassets */,
+				1E51BFB92C2DAD08007E283D /* CategoryView */,
+				1E51BFB12C2D64B9007E283D /* ChooseUsersView */,
+				1E51BFB62C2D79F9007E283D /* Extensions */,
+				1E16073D2C2D41F60066CAB9 /* MainView */,
 				1E1607192C2D40E50066CAB9 /* Preview Content */,
+				1E51BFC12C2EA1B1007E283D /* TeamView */,
+				1E51BFBE2C2E9F22007E283D /* UI */,
 			);
 			path = Alias;
 			sourceTree = "<group>";
@@ -175,6 +183,23 @@
 				1E51BFBC2C2DAD27007E283D /* CategoryViewModel.swift */,
 			);
 			path = CategoryView;
+			sourceTree = "<group>";
+		};
+		1E51BFBE2C2E9F22007E283D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1E51BFBF2C2E9F3C007E283D /* PlainButton.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		1E51BFC12C2EA1B1007E283D /* TeamView */ = {
+			isa = PBXGroup;
+			children = (
+				1E51BFC22C2EA1D4007E283D /* TeamView.swift */,
+				1E51BFC42C2EA5C5007E283D /* TeamViewModel.swift */,
+			);
+			path = TeamView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,9 +335,12 @@
 				1E51BFB52C2D654F007E283D /* ChoosePlayersViewModel.swift in Sources */,
 				1E51BFBB2C2DAD1B007E283D /* CategoryView.swift in Sources */,
 				1E1607162C2D40E40066CAB9 /* MainView.swift in Sources */,
+				1E51BFC52C2EA5C5007E283D /* TeamViewModel.swift in Sources */,
+				1E51BFC02C2E9F3C007E283D /* PlainButton.swift in Sources */,
 				1E1607142C2D40E40066CAB9 /* AliasApp.swift in Sources */,
 				1E51BFBD2C2DAD27007E283D /* CategoryViewModel.swift in Sources */,
 				1E51BFB32C2D64FB007E283D /* ChoosePlayersView.swift in Sources */,
+				1E51BFC32C2EA1D4007E283D /* TeamView.swift in Sources */,
 				1E51BFB82C2D7A17007E283D /* NavigationDestination.swift in Sources */,
 				1E16073F2C2D42120066CAB9 /* MainViewModel.swift in Sources */,
 			);

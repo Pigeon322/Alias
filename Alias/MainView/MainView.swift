@@ -16,7 +16,9 @@ struct MainView: View {
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
-                playViewButton
+                PlainButton(text: "Играть") {
+                    viewModel.destination = .choosePlayers
+                }
                 
                 buttonsStack
             }
@@ -38,23 +40,6 @@ struct MainView: View {
         }
     }
     
-    private var playViewButton: some View {
-        VStack {
-            Button {
-                viewModel.destination = .choosePlayers
-            } label: {
-                Text("Играть")
-                    .foregroundStyle(.white)
-                    .bold()
-                    .padding()
-            }
-            .frame(maxWidth: .infinity)
-            .background(.blue)
-            .cornerRadius(15)
-            .padding()
-        }
-    }
-    
     private var buttonsStack: some View {
         HStack(spacing: 10) {
             rulesButton
@@ -62,38 +47,23 @@ struct MainView: View {
             settingsButton
         }
         .frame(maxWidth: .infinity)
-        .padding(.horizontal)
     }
     
     private var rulesButton: some View {
-        VStack {
-            Button {
-                viewModel.destination = .rules
-            } label: {
-                Text("Правила")
-                    .foregroundStyle(.white)
-                    .bold()
-                    .padding()
-            }
-            .frame(maxWidth: .infinity)
-            .background(.red)
-            .cornerRadius(15)
+        PlainButton(
+            text: "Правила",
+            style: .extra
+        ) {
+            viewModel.destination = .rules
         }
     }
     
     private var settingsButton: some View {
-        VStack {
-            Button {
-                viewModel.destination = .settings
-            } label: {
-                Text("Настройки")
-                    .foregroundStyle(.white)
-                    .bold()
-                    .padding()
-            }
-            .frame(maxWidth: .infinity)
-            .background(.red)
-            .cornerRadius(15)
+        PlainButton(
+            text: "Настройки",
+            style: .extra
+        ) {
+            viewModel.destination = .settings
         }
     }
     
