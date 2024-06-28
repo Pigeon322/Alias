@@ -12,12 +12,7 @@ struct SettingsView: View {
     @State private var viewModel = SettingsViewModel()
     
     init() {
-        UISegmentedControl.appearance().selectedSegmentTintColor = .blue
-        UISegmentedControl.appearance().backgroundColor = .black.withAlphaComponent(0.3)
-        UISegmentedControl.appearance()
-            .setTitleTextAttributes([.foregroundColor: UIColor.white], for: .normal)
-               UISegmentedControl.appearance()
-                   .setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
+        setupPicker()
     }
     
     var body: some View {
@@ -28,6 +23,16 @@ struct SettingsView: View {
             
             winPointsBlock
             
+            toggleView(
+                text: "Отнимать очки за пропуск",
+                isOn: $viewModel.isDecrementPointsOn
+            )
+            
+            toggleView(
+                text: "Звуки",
+                isOn: $viewModel.isSoundOn
+            )
+            
             Spacer()
         }
         .frame(maxWidth: .infinity)
@@ -37,22 +42,23 @@ struct SettingsView: View {
     
     private var roundTimeBlock: some View {
         VStack(spacing: 15) {
-            getLabel(text: "Длительность раунда")
+            label(text: "Длительность раунда")
                         
-            getSegmentedControl(key: "RoundTime", tags: [30,60,90], selection: $viewModel.roundTime)
+            getSegmentedControl(
+                key: "RoundTime", tags: [30,60,90], selection: $viewModel.roundTime)
         }
     }
     
     private var winPointsBlock: some View {
         VStack(spacing: 15) {
-            getLabel(text: "Очков для победы")
+            label(text: "Очков для победы")
 
             getSegmentedControl(key: "WinPoints", tags: [25,50,75,100], selection: $viewModel.winPoints)
         }
     }
     
     @ViewBuilder
-    private func getLabel(text: String) -> some View {
+    private func label(text: String) -> some View {
         HStack {
             Text(text)
                 .font(.system(size: 15))
@@ -82,6 +88,27 @@ struct SettingsView: View {
         .padding(.horizontal, 15)
     }
     
+    @ViewBuilder
+    private func toggleView(
+        text: String ,
+        isOn: Binding<Bool>
+    ) -> some View {
+        Toggle(
+            text,
+            isOn: isOn
+        )
+        .foregroundStyle(.white)
+        .padding(.horizontal, 15)
+    }
+    
+    private func setupPicker() {
+        UISegmentedControl.appearance().selectedSegmentTintColor = .blue
+        UISegmentedControl.appearance().backgroundColor = .black.withAlphaComponent(0.3)
+        UISegmentedControl.appearance()
+            .setTitleTextAttributes([.foregroundColor: UIColor.white], for: .normal)
+               UISegmentedControl.appearance()
+                   .setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
+    }
 }
 
 #Preview {

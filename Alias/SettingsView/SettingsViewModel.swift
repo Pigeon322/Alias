@@ -10,4 +10,6 @@ import Foundation
 final class SettingsViewModel: ObservableObject {
     @Published var roundTime = 60
     @Published var winPoints = 25
+    @Published var isDecrementPointsOn = false
+    @Published var isSoundOn = true
 }
