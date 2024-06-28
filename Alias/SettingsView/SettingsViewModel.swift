@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+final class SettingsViewModel: ObservableObject {
+    @Published var roundTime = 60
+    @Published var winPoints = 25
+}
