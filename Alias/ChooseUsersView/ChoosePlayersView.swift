@@ -12,7 +12,7 @@ struct ChoosePlayersView: View {
 
     var body: some View {
         VStack {
-            playersCountLabel
+            PlainLabel(text: "Сколько будет игроков?")
             
             Spacer()
             
@@ -34,17 +34,6 @@ struct ChoosePlayersView: View {
             default:
                 EmptyView()
             }
-        }
-    }
-    
-    private var playersCountLabel: some View {
-        VStack {
-            Text("Сколько будет игроков?")
-                .bold()
-                .font(.system(size: 35))
-                .foregroundStyle(.red)
-                .frame(maxWidth: .infinity)
-                .padding(.horizontal, 10)
         }
     }
     

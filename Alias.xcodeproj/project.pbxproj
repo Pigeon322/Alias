@@ -23,6 +23,10 @@
 		1E51BFC02C2E9F3C007E283D /* PlainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51BFBF2C2E9F3C007E283D /* PlainButton.swift */; };
 		1E51BFC32C2EA1D4007E283D /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51BFC22C2EA1D4007E283D /* TeamView.swift */; };
 		1E51BFC52C2EA5C5007E283D /* TeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51BFC42C2EA5C5007E283D /* TeamViewModel.swift */; };
+		1E51BFC82C2EA7ED007E283D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51BFC72C2EA7ED007E283D /* SettingsView.swift */; };
+		1E51BFCA2C2EA7F9007E283D /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51BFC92C2EA7F9007E283D /* SettingsViewModel.swift */; };
+		1E51BFCD2C2EA80F007E283D /* SettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51BFCC2C2EA80F007E283D /* SettingsService.swift */; };
+		1E51BFCF2C2EA882007E283D /* PlainLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51BFCE2C2EA882007E283D /* PlainLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +66,10 @@
 		1E51BFBF2C2E9F3C007E283D /* PlainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainButton.swift; sourceTree = "<group>"; };
 		1E51BFC22C2EA1D4007E283D /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
 		1E51BFC42C2EA5C5007E283D /* TeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewModel.swift; sourceTree = "<group>"; };
+		1E51BFC72C2EA7ED007E283D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		1E51BFC92C2EA7F9007E283D /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		1E51BFCC2C2EA80F007E283D /* SettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsService.swift; sourceTree = "<group>"; };
+		1E51BFCE2C2EA882007E283D /* PlainLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +120,8 @@
 		1E1607122C2D40E40066CAB9 /* Alias */ = {
 			isa = PBXGroup;
 			children = (
+				1E51BFCB2C2EA7FD007E283D /* Services */,
+				1E51BFC62C2EA7DD007E283D /* SettingsView */,
 				1E1607132C2D40E40066CAB9 /* AliasApp.swift */,
 				1E1607172C2D40E50066CAB9 /* Assets.xcassets */,
 				1E51BFB92C2DAD08007E283D /* CategoryView */,
@@ -189,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				1E51BFBF2C2E9F3C007E283D /* PlainButton.swift */,
+				1E51BFCE2C2EA882007E283D /* PlainLabel.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -200,6 +211,23 @@
 				1E51BFC42C2EA5C5007E283D /* TeamViewModel.swift */,
 			);
 			path = TeamView;
+			sourceTree = "<group>";
+		};
+		1E51BFC62C2EA7DD007E283D /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				1E51BFC72C2EA7ED007E283D /* SettingsView.swift */,
+				1E51BFC92C2EA7F9007E283D /* SettingsViewModel.swift */,
+			);
+			path = SettingsView;
+			sourceTree = "<group>";
+		};
+		1E51BFCB2C2EA7FD007E283D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1E51BFCC2C2EA80F007E283D /* SettingsService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,9 +368,13 @@
 				1E1607142C2D40E40066CAB9 /* AliasApp.swift in Sources */,
 				1E51BFBD2C2DAD27007E283D /* CategoryViewModel.swift in Sources */,
 				1E51BFB32C2D64FB007E283D /* ChoosePlayersView.swift in Sources */,
+				1E51BFCA2C2EA7F9007E283D /* SettingsViewModel.swift in Sources */,
 				1E51BFC32C2EA1D4007E283D /* TeamView.swift in Sources */,
+				1E51BFC82C2EA7ED007E283D /* SettingsView.swift in Sources */,
 				1E51BFB82C2D7A17007E283D /* NavigationDestination.swift in Sources */,
+				1E51BFCD2C2EA80F007E283D /* SettingsService.swift in Sources */,
 				1E16073F2C2D42120066CAB9 /* MainViewModel.swift in Sources */,
+				1E51BFCF2C2EA882007E283D /* PlainLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,9 +10,6 @@ import SwiftUI
 struct MainView: View {
     @StateObject private var viewModel = MainViewModel()
 
-    @State private var tagSelection: String? = nil
-    @State private var isPresentedChoosePlayersView = false
-
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
@@ -32,9 +29,9 @@ struct MainView: View {
                 case .rules:
                     ChoosePlayersView()
                 case .settings:
-                    ChoosePlayersView()
+                    SettingsView()
                 default:
-                    ChoosePlayersView()
+                    EmptyView()
                 }
             }
         }
