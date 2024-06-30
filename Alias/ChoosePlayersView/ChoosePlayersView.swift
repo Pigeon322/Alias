@@ -21,7 +21,7 @@ struct ChoosePlayersView: View {
             buttonsStack
             
             PlainButton(text: "Продолжить") {
-                viewModel.destination = .category
+                viewModel.destination = .teams
             }
         }
         .frame(maxWidth: .infinity)
@@ -29,8 +29,8 @@ struct ChoosePlayersView: View {
         .background(.black)
         .navigationDestination(for: $viewModel.destination) { destination in
             switch destination {
-            case .category:
-                CategoryView() // TODO: - Нужно как-то прокидывать количество игроков
+            case .teams:
+                TeamView(viewModel: TeamViewModel(playersCount: viewModel.playersCount))
             default:
                 EmptyView()
             }
@@ -87,6 +87,3 @@ struct ChoosePlayersView: View {
     }
 }
 
-#Preview {
-    ChoosePlayersView()
-}

@@ -17,5 +17,6 @@ enum Destination: Equatable {
     case choosePlayers
     case rules
     case settings
+    case teams
     case category
 }

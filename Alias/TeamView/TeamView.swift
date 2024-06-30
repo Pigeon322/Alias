@@ -27,6 +27,34 @@ struct TeamView: View {
     
     @ViewBuilder
     private func teamView(team: Team) -> some View {
-        
+        HStack {
+            Image("Image") // TODO: - Добавить картинки
+            
+            label(text: team.name)
+        }
+    }
+    
+    @ViewBuilder
+    private func label(text: String) -> some View {
+        HStack {
+            Text(text)
+                .font(.system(size: 15))
+                .foregroundStyle(.white)
+                .bold()
+            
+            Spacer()
+        }
+    }
+    
+    @ViewBuilder
+    private func iconsBlock(teammatesCount: Int) -> some View {
+        HStack {
+            PlainLabel(
+                text: teammatesCount.description,
+                size: 15
+            )
+            
+            Image("Image")
+        }
     }
 }

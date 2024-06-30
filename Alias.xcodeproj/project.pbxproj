@@ -122,16 +122,16 @@
 		1E1607122C2D40E40066CAB9 /* Alias */ = {
 			isa = PBXGroup;
 			children = (
-				1EBA04B52C318E8A0091353C /* Models */,
-				1E51BFCB2C2EA7FD007E283D /* Services */,
-				1E51BFC62C2EA7DD007E283D /* SettingsView */,
 				1E1607132C2D40E40066CAB9 /* AliasApp.swift */,
 				1E1607172C2D40E50066CAB9 /* Assets.xcassets */,
 				1E51BFB92C2DAD08007E283D /* CategoryView */,
-				1E51BFB12C2D64B9007E283D /* ChooseUsersView */,
+				1E51BFB12C2D64B9007E283D /* ChoosePlayersView */,
 				1E51BFB62C2D79F9007E283D /* Extensions */,
 				1E16073D2C2D41F60066CAB9 /* MainView */,
+				1EBA04B52C318E8A0091353C /* Models */,
 				1E1607192C2D40E50066CAB9 /* Preview Content */,
+				1E51BFCB2C2EA7FD007E283D /* Services */,
+				1E51BFC62C2EA7DD007E283D /* SettingsView */,
 				1E51BFC12C2EA1B1007E283D /* TeamView */,
 				1E51BFBE2C2E9F22007E283D /* UI */,
 			);
@@ -172,13 +172,13 @@
 			path = MainView;
 			sourceTree = "<group>";
 		};
-		1E51BFB12C2D64B9007E283D /* ChooseUsersView */ = {
+		1E51BFB12C2D64B9007E283D /* ChoosePlayersView */ = {
 			isa = PBXGroup;
 			children = (
 				1E51BFB22C2D64FB007E283D /* ChoosePlayersView.swift */,
 				1E51BFB42C2D654F007E283D /* ChoosePlayersViewModel.swift */,
 			);
-			path = ChooseUsersView;
+			path = ChoosePlayersView;
 			sourceTree = "<group>";
 		};
 		1E51BFB62C2D79F9007E283D /* Extensions */ = {

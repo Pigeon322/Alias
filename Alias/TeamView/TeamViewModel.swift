@@ -59,6 +59,9 @@ final class TeamViewModel: ObservableObject {
                 color: .red,
                 playersCount: minValue
             )
+            
+            teams.append(firstTeam)
+            teams.append(secondTeam)
         }
     }
     
