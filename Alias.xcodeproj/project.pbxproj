@@ -27,6 +27,7 @@
 		1E51BFCA2C2EA7F9007E283D /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51BFC92C2EA7F9007E283D /* SettingsViewModel.swift */; };
 		1E51BFCD2C2EA80F007E283D /* SettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51BFCC2C2EA80F007E283D /* SettingsService.swift */; };
 		1E51BFCF2C2EA882007E283D /* PlainLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51BFCE2C2EA882007E283D /* PlainLabel.swift */; };
+		1EBA04B72C318E990091353C /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBA04B62C318E990091353C /* Team.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		1E51BFC92C2EA7F9007E283D /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		1E51BFCC2C2EA80F007E283D /* SettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsService.swift; sourceTree = "<group>"; };
 		1E51BFCE2C2EA882007E283D /* PlainLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainLabel.swift; sourceTree = "<group>"; };
+		1EBA04B62C318E990091353C /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 		1E1607122C2D40E40066CAB9 /* Alias */ = {
 			isa = PBXGroup;
 			children = (
+				1EBA04B52C318E8A0091353C /* Models */,
 				1E51BFCB2C2EA7FD007E283D /* Services */,
 				1E51BFC62C2EA7DD007E283D /* SettingsView */,
 				1E1607132C2D40E40066CAB9 /* AliasApp.swift */,
@@ -228,6 +231,14 @@
 				1E51BFCC2C2EA80F007E283D /* SettingsService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		1EBA04B52C318E8A0091353C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1EBA04B62C318E990091353C /* Team.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,6 +383,7 @@
 				1E51BFC32C2EA1D4007E283D /* TeamView.swift in Sources */,
 				1E51BFC82C2EA7ED007E283D /* SettingsView.swift in Sources */,
 				1E51BFB82C2D7A17007E283D /* NavigationDestination.swift in Sources */,
+				1EBA04B72C318E990091353C /* Team.swift in Sources */,
 				1E51BFCD2C2EA80F007E283D /* SettingsService.swift in Sources */,
 				1E16073F2C2D42120066CAB9 /* MainViewModel.swift in Sources */,
 				1E51BFCF2C2EA882007E283D /* PlainLabel.swift in Sources */,
