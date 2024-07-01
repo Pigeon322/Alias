@@ -13,16 +13,31 @@ struct TeamView: View {
     
     var body: some View {
         VStack {
-            PlainLabel(text: "Разделитесь на команды")
+            PlainLabel(
+                text: "Разделитесь на команды",
+                size: 30
+            )
+            
+            Spacer()
             
             teamBlock
+            
+            Spacer()
         }
+        .frame(maxWidth: .infinity)
+        .frame(maxHeight: .infinity)
+        .background(.black)
     }
     
     private var teamBlock: some View {
         VStack {
+            ForEach(viewModel.teams, id: \.name) {
+                teamView(team: $0)
+            }
             
+            Spacer()
         }
+        .padding(.leading, 15)
     }
     
     @ViewBuilder
@@ -31,14 +46,17 @@ struct TeamView: View {
             Image("Image") // TODO: - Добавить картинки
             
             label(text: team.name)
+                        
+            iconsBlock(teammatesCount: team.playersCount)
         }
+        .frame(height: 75)
     }
     
     @ViewBuilder
     private func label(text: String) -> some View {
         HStack {
             Text(text)
-                .font(.system(size: 15))
+                .font(.system(size: 20))
                 .foregroundStyle(.white)
                 .bold()
             
@@ -54,7 +72,10 @@ struct TeamView: View {
                 size: 15
             )
             
-            Image("Image")
+            Image("Image") // TODO: - картинка с человечком
         }
+        .frame(alignment: .trailing)
+        .frame(maxHeight: .infinity)
+        .background(.yellow)
     }
 }
