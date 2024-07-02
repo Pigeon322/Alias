@@ -9,6 +9,7 @@ import SwiftUI
 
 final class TeamViewModel: ObservableObject {
     @Published var teams: [Team] = []
+    @Published var destination: Destination?
     
     init(playersCount: Int) {
         createTeams(playersCount: playersCount)
@@ -17,7 +18,6 @@ final class TeamViewModel: ObservableObject {
     private func createTeams(playersCount: Int) {
         switch playersCount {
         case 3:
-            
             let firstTeam = createTeam(
                 name: "Дикие волки",
                 icon: "", // TODO: - Добавить иконку
@@ -43,7 +43,7 @@ final class TeamViewModel: ObservableObject {
             teams.append(secondTeam)
             teams.append(thirdTeam)
         default:
-            let maxValue = playersCount % 2
+            let maxValue = playersCount / 2
             let minValue = playersCount - maxValue
             
             let firstTeam = createTeam(

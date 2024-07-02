@@ -11,8 +11,8 @@ final class ChoosePlayersViewModel: ObservableObject {
     @Published var playersCount = 2
     @Published var destination: Destination?
 
-    
     func incerement() {
+        guard playersCount <= 19 else { return }
         playersCount += 1
     }
     

@@ -22,11 +22,19 @@ struct TeamView: View {
             
             teamBlock
             
-            Spacer()
+            continueButton
         }
         .frame(maxWidth: .infinity)
         .frame(maxHeight: .infinity)
         .background(.black)
+        .navigationDestination(for: $viewModel.destination) { destination in
+            switch destination {
+            case .category:
+                CategoryView()
+            default:
+                EmptyView()
+            }
+        }
     }
     
     private var teamBlock: some View {
@@ -43,10 +51,13 @@ struct TeamView: View {
     @ViewBuilder
     private func teamView(team: Team) -> some View {
         HStack {
-            Image("Image") // TODO: - Добавить картинки
+            Image(systemName: "checkmark.circle.fill") // TODO: - Добавить картинки
+              .resizable()
+              .frame(width: 40, height: 40) // put your sizes here
+              .foregroundColor(team.color)
             
             label(text: team.name)
-                        
+            
             iconsBlock(teammatesCount: team.playersCount)
         }
         .frame(height: 75)
@@ -72,10 +83,15 @@ struct TeamView: View {
                 size: 15
             )
             
-            Image("Image") // TODO: - картинка с человечком
+            Image("checkmark") // TODO: - картинка с человечком
         }
         .frame(alignment: .trailing)
         .frame(maxHeight: .infinity)
-        .background(.yellow)
+    }
+    
+    private var continueButton: some View {
+        PlainButton(text: "Продолжить") {
+            viewModel.destination = .category
+        }
     }
 }
