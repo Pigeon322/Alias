@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TeamView: View {
     
-    @State var viewModel: TeamViewModel
+    @StateObject var viewModel: TeamViewModel
     
     var body: some View {
         VStack {
@@ -30,7 +30,7 @@ struct TeamView: View {
         .navigationDestination(for: $viewModel.destination) { destination in
             switch destination {
             case .category:
-                CategoryView()
+                CategoriesView()
             default:
                 EmptyView()
             }

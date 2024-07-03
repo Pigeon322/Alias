@@ -18,8 +18,8 @@
 		1E51BFB32C2D64FB007E283D /* ChoosePlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51BFB22C2D64FB007E283D /* ChoosePlayersView.swift */; };
 		1E51BFB52C2D654F007E283D /* ChoosePlayersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51BFB42C2D654F007E283D /* ChoosePlayersViewModel.swift */; };
 		1E51BFB82C2D7A17007E283D /* NavigationDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51BFB72C2D7A17007E283D /* NavigationDestination.swift */; };
-		1E51BFBB2C2DAD1B007E283D /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51BFBA2C2DAD1B007E283D /* CategoryView.swift */; };
-		1E51BFBD2C2DAD27007E283D /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51BFBC2C2DAD27007E283D /* CategoryViewModel.swift */; };
+		1E51BFBB2C2DAD1B007E283D /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51BFBA2C2DAD1B007E283D /* CategoriesView.swift */; };
+		1E51BFBD2C2DAD27007E283D /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51BFBC2C2DAD27007E283D /* CategoriesViewModel.swift */; };
 		1E51BFC02C2E9F3C007E283D /* PlainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51BFBF2C2E9F3C007E283D /* PlainButton.swift */; };
 		1E51BFC32C2EA1D4007E283D /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51BFC22C2EA1D4007E283D /* TeamView.swift */; };
 		1E51BFC52C2EA5C5007E283D /* TeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51BFC42C2EA5C5007E283D /* TeamViewModel.swift */; };
@@ -28,6 +28,8 @@
 		1E51BFCD2C2EA80F007E283D /* SettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51BFCC2C2EA80F007E283D /* SettingsService.swift */; };
 		1E51BFCF2C2EA882007E283D /* PlainLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51BFCE2C2EA882007E283D /* PlainLabel.swift */; };
 		1EBA04B72C318E990091353C /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBA04B62C318E990091353C /* Team.swift */; };
+		1EFB7F2A2C353E1D00AE1475 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFB7F292C353E1D00AE1475 /* Category.swift */; };
+		1EFB7F2C2C3540A000AE1475 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFB7F2B2C3540A000AE1475 /* CategoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,8 +64,8 @@
 		1E51BFB22C2D64FB007E283D /* ChoosePlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePlayersView.swift; sourceTree = "<group>"; };
 		1E51BFB42C2D654F007E283D /* ChoosePlayersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePlayersViewModel.swift; sourceTree = "<group>"; };
 		1E51BFB72C2D7A17007E283D /* NavigationDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDestination.swift; sourceTree = "<group>"; };
-		1E51BFBA2C2DAD1B007E283D /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
-		1E51BFBC2C2DAD27007E283D /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		1E51BFBA2C2DAD1B007E283D /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
+		1E51BFBC2C2DAD27007E283D /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
 		1E51BFBF2C2E9F3C007E283D /* PlainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainButton.swift; sourceTree = "<group>"; };
 		1E51BFC22C2EA1D4007E283D /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
 		1E51BFC42C2EA5C5007E283D /* TeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewModel.swift; sourceTree = "<group>"; };
@@ -72,6 +74,8 @@
 		1E51BFCC2C2EA80F007E283D /* SettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsService.swift; sourceTree = "<group>"; };
 		1E51BFCE2C2EA882007E283D /* PlainLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainLabel.swift; sourceTree = "<group>"; };
 		1EBA04B62C318E990091353C /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		1EFB7F292C353E1D00AE1475 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		1EFB7F2B2C3540A000AE1475 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,8 +196,8 @@
 		1E51BFB92C2DAD08007E283D /* CategoryView */ = {
 			isa = PBXGroup;
 			children = (
-				1E51BFBA2C2DAD1B007E283D /* CategoryView.swift */,
-				1E51BFBC2C2DAD27007E283D /* CategoryViewModel.swift */,
+				1E51BFBA2C2DAD1B007E283D /* CategoriesView.swift */,
+				1E51BFBC2C2DAD27007E283D /* CategoriesViewModel.swift */,
 			);
 			path = CategoryView;
 			sourceTree = "<group>";
@@ -203,6 +207,7 @@
 			children = (
 				1E51BFBF2C2E9F3C007E283D /* PlainButton.swift */,
 				1E51BFCE2C2EA882007E283D /* PlainLabel.swift */,
+				1EFB7F2B2C3540A000AE1475 /* CategoryView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -237,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				1EBA04B62C318E990091353C /* Team.swift */,
+				1EFB7F292C353E1D00AE1475 /* Category.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -372,16 +378,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E51BFB52C2D654F007E283D /* ChoosePlayersViewModel.swift in Sources */,
-				1E51BFBB2C2DAD1B007E283D /* CategoryView.swift in Sources */,
+				1E51BFBB2C2DAD1B007E283D /* CategoriesView.swift in Sources */,
 				1E1607162C2D40E40066CAB9 /* MainView.swift in Sources */,
 				1E51BFC52C2EA5C5007E283D /* TeamViewModel.swift in Sources */,
 				1E51BFC02C2E9F3C007E283D /* PlainButton.swift in Sources */,
 				1E1607142C2D40E40066CAB9 /* AliasApp.swift in Sources */,
-				1E51BFBD2C2DAD27007E283D /* CategoryViewModel.swift in Sources */,
+				1E51BFBD2C2DAD27007E283D /* CategoriesViewModel.swift in Sources */,
 				1E51BFB32C2D64FB007E283D /* ChoosePlayersView.swift in Sources */,
+				1EFB7F2C2C3540A000AE1475 /* CategoryView.swift in Sources */,
 				1E51BFCA2C2EA7F9007E283D /* SettingsViewModel.swift in Sources */,
 				1E51BFC32C2EA1D4007E283D /* TeamView.swift in Sources */,
 				1E51BFC82C2EA7ED007E283D /* SettingsView.swift in Sources */,
+				1EFB7F2A2C353E1D00AE1475 /* Category.swift in Sources */,
 				1E51BFB82C2D7A17007E283D /* NavigationDestination.swift in Sources */,
 				1EBA04B72C318E990091353C /* Team.swift in Sources */,
 				1E51BFCD2C2EA80F007E283D /* SettingsService.swift in Sources */,
