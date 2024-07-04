@@ -12,7 +12,11 @@ struct CategoriesView: View {
     @StateObject private var viewModel = CategoriesViewModel()
         
     var body: some View {
-        PlainLabel(text: "Выберите наборы слов")
+        VStack {
+            PlainLabel(text: "Выберите наборы слов")
+            
+            CategoryView(category: Category(name: "Базовый набор", icon: "checkmark.circle.fill", words: ["Был","Ты","Человек"]))
+        }
     }
     
     private var categoriesView: some View {

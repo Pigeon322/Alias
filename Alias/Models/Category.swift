@@ -11,5 +11,4 @@ struct Category {
     let name: String
     let icon: String
     let words: [String]
-    let wordsCount: Int
 }
