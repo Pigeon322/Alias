@@ -10,5 +10,6 @@ import Foundation
 struct Category {
     let name: String
     let icon: String
+    var isSelected: Bool
     let words: [String]
 }

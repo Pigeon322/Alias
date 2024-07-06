@@ -10,26 +10,28 @@ import SwiftUI
 struct CategoriesView: View {
     
     @StateObject private var viewModel = CategoriesViewModel()
-        
+    
     var body: some View {
         VStack(spacing: 15) {
             PlainLabel(text: "Выберите наборы слов")
             
-            CategoryView(category: Category(name: "Базовый набор", icon: "booksCategory", words: ["Был","Бы","Ты","Человек"]))
-                .padding(.horizontal, 20)
+            Spacer()
+            
+            categoriesView
+            
+            Spacer()
         }
         .frame(maxWidth: .infinity)
         .frame(maxHeight: .infinity)
+        .padding(.horizontal, 20)
         .background(.black)
     }
     
     private var categoriesView: some View {
         ScrollView {
-            LazyVStack {
-                Section {
-                    ForEach(viewModel.category, id: \.name) {
-                        CategoryView(category: $0)
-                    }
+            HStack(spacing: 10) {
+                ForEach(viewModel.category, id: \.name) {
+                    CategoryView(category: $0)
                 }
             }
         }
