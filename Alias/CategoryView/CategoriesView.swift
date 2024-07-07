@@ -20,11 +20,21 @@ struct CategoriesView: View {
             categoriesView
             
             Spacer()
+            
+            continueButton
         }
         .frame(maxWidth: .infinity)
         .frame(maxHeight: .infinity)
         .padding(.horizontal, 20)
         .background(.black)
+        .navigationDestination(for: $viewModel.destination) { destination in
+            switch destination {
+            case .settings:
+                SettingsView()
+            default:
+                EmptyView()
+            }
+        }
     }
     
     private var categoriesView: some View {
@@ -34,6 +44,12 @@ struct CategoriesView: View {
                     CategoryView(category: $0)
                 }
             }
+        }
+    }
+    
+    private var continueButton: some View {
+        PlainButton(text: "Продолжить") {
+            viewModel.destination = .settings
         }
     }
 }

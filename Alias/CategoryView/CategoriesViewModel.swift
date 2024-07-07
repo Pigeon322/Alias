@@ -9,6 +9,8 @@ import SwiftUI
 
 final class CategoriesViewModel: ObservableObject {
     
+    @Published var destination: Destination?
+
     @Published var category: [Category] = [Category(
         name: "Базовый набор",
         icon: "booksCategory",
