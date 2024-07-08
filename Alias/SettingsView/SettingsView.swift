@@ -25,12 +25,12 @@ struct SettingsView: View {
             winPointsBlock
             
             toggleView(
-                text: "Отнимать очки за пропуск",
+                "Отнимать очки за пропуск",
                 isOn: $viewModel.isDecrementPointsOn
             )
             
             toggleView(
-                text: "Звуки",
+                "Звуки",
                 isOn: $viewModel.isSoundOn
             )
             
@@ -103,7 +103,7 @@ struct SettingsView: View {
     
     @ViewBuilder
     private func toggleView(
-        text: String ,
+        _ text: String ,
         isOn: Binding<Bool>
     ) -> some View {
         Toggle(

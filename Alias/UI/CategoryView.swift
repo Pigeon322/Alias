@@ -12,20 +12,26 @@ struct CategoryView: View {
     
     var body: some View {
         VStack {
-            Button {
-                category.isSelected.toggle()
-                print(category.isSelected)
-            } label: {
-                textBlock
-                    .padding(.horizontal, 10)
-            }
+            textBlock
+                .padding(.horizontal, 10)
         }
         .frame(height: 150)
-        .background(Image(category.icon))
+        .background(Image(category.icon).resizable())
         .cornerRadius(15)
         .overlay {
             RoundedRectangle(cornerRadius: 15)
-                 .stroke(.white, lineWidth: 5)
+                .stroke(.white, lineWidth: 5)
+        }
+        .overlay(alignment: .topTrailing) {
+            if category.isSelected {
+                Image(systemName: "checkmark")
+                    .frame(width: 25, height: 25)
+                    .foregroundColor(.white)
+                    .background(.blue)
+                    .cornerRadius(25/2)
+                    .padding(.top, 10)
+                    .padding(.trailing, 10)
+            }
         }
     }
     

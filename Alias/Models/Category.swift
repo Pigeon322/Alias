@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Category {
+struct Category: Hashable {
     let name: String
     let icon: String
     var isSelected: Bool

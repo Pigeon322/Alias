@@ -40,10 +40,19 @@ struct CategoriesView: View {
     private var categoriesView: some View {
         ScrollView {
             HStack(spacing: 10) {
-                ForEach(viewModel.category, id: \.name) {
-                    CategoryView(category: $0)
+                ForEach(viewModel.categories, id: \.name) {
+                    categoryView($0)
                 }
             }
+        }
+    }
+    
+    @ViewBuilder
+    private func categoryView(_ category: Category) -> some View {
+        Button {
+            viewModel.selection.contains(category) ? viewModel.removeCategory(category) : viewModel.insertCategory(category)
+        } label: {
+            CategoryView(category: category)
         }
     }
     
