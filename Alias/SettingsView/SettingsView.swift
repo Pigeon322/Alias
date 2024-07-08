@@ -46,7 +46,7 @@ struct SettingsView: View {
         .navigationDestination(for: $viewModel.destination) { destination in
             switch destination {
             case .round:
-                RoundView()
+                TeamView(viewModel: TeamViewModel(title: "Раунд #1", playersCount: <#T##Int#>)) // TODO: - сделать какой-то синглтон с настрйоками игры и передавать его вместо плеерс каунт
             default:
                 EmptyView()
             }

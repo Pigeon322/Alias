@@ -9,7 +9,7 @@ import SwiftUI
 
 final class CategoriesViewModel: ObservableObject {
     @Published var destination: Destination?
-
+    @Published private(set) var selection = Set<Category>()
     @Published var categories: [Category] = [Category(
         name: "Базовый набор",
         icon: "booksCategory",
@@ -18,25 +18,16 @@ final class CategoriesViewModel: ObservableObject {
                                            Category(
         name: "Дополнительный набор",
         icon: "additionalCategory",
-        words: ["Твою","Дочку","Ебут","Чука"]
+        words: ["Твою","Дочку","Ебут","Чука","На континенте","Хуй знает", "где"]
     )
     ]
     
-    @Published private(set) var selection = Set<Category>()
     
     func insertCategory(_ category: Category) {
         selection.insert(category)
-//        if let index = self.categories.firstIndex(where: { $0.name == category.name}) {
-//            categories[index] = Category(name: category.name, icon: category.icon, isSelected: true, words: category.words)
-//     }
-        print("Selection count",selection.count)
     }
     
     func removeCategory(_ category: Category) {
         selection.remove(category)
-//        if let index = self.categories.firstIndex(where: { $0.name == category.name}) {
-//            categories[index] = Category(name: category.name, icon: category.icon, isSelected: false, words: category.words)
-//     }
-        print("Selection count",selection.count)
     }
 }

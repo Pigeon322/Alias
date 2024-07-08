@@ -30,7 +30,7 @@ struct ChoosePlayersView: View {
         .navigationDestination(for: $viewModel.destination) { destination in
             switch destination {
             case .teams:
-                TeamView(viewModel: TeamViewModel(playersCount: viewModel.playersCount))
+                TeamView(viewModel: TeamViewModel(title: "Разделитесь на команды", playersCount: viewModel.playersCount))
             default:
                 EmptyView()
             }

@@ -8,12 +8,18 @@
 import SwiftUI
 
 final class TeamViewModel: ObservableObject {
+    @Published var title: String
     @Published var teams: [Team] = []
     @Published var destination: Destination?
     
-    init(playersCount: Int) {
+    init(
+        title: String,
+        playersCount: Int
+    ) {
+        self.title = title
         createTeams(playersCount: playersCount)
     }
+    
     
     private func createTeams(playersCount: Int) {
         switch playersCount {

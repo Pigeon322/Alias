@@ -14,7 +14,7 @@ struct TeamView: View {
     var body: some View {
         VStack {
             PlainLabel(
-                text: "Разделитесь на команды",
+                text: viewModel.title,
                 size: 30
             )
             
