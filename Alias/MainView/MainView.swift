@@ -13,7 +13,7 @@ struct MainView: View {
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
-                PlainButton(text: "Играть") {
+                PlainButton("Играть") {
                     viewModel.destination = .choosePlayers
                 }
                 
@@ -29,7 +29,7 @@ struct MainView: View {
                 case .rules:
                     ChoosePlayersView()
                 case .settings:
-                    SettingsView()
+                    SettingsView(viewModel: SettingsViewModel(isBeforeStart: false))
                 default:
                     EmptyView()
                 }
@@ -48,7 +48,7 @@ struct MainView: View {
     
     private var rulesButton: some View {
         PlainButton(
-            text: "Правила",
+            "Правила",
             style: .extra
         ) {
             viewModel.destination = .rules
@@ -57,7 +57,7 @@ struct MainView: View {
     
     private var settingsButton: some View {
         PlainButton(
-            text: "Настройки",
+            "Настройки",
             style: .extra
         ) {
             viewModel.destination = .settings

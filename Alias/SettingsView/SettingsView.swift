@@ -9,9 +9,10 @@ import SwiftUI
 
 struct SettingsView: View {
     
-    @State private var viewModel = SettingsViewModel()
+    @State private var viewModel: SettingsViewModel
     
-    init() {
+    init(viewModel: SettingsViewModel) {
+        self.viewModel = viewModel
         setupPicker()
     }
     
@@ -34,10 +35,22 @@ struct SettingsView: View {
             )
             
             Spacer()
+            
+            if viewModel.isBeforeStart {
+                continueButton
+            }
         }
         .frame(maxWidth: .infinity)
         .frame(maxHeight: .infinity)
         .background(.black)
+        .navigationDestination(for: $viewModel.destination) { destination in
+            switch destination {
+            case .round:
+                RoundView()
+            default:
+                EmptyView()
+            }
+        }
     }
     
     private var roundTimeBlock: some View {
@@ -101,6 +114,12 @@ struct SettingsView: View {
         .padding(.horizontal, 15)
     }
     
+    private var continueButton: some View {
+        PlainButton("Продолжить") {
+            viewModel.destination = .round
+        }
+    }
+    
     private func setupPicker() {
         UISegmentedControl.appearance().selectedSegmentTintColor = .blue
         UISegmentedControl.appearance().backgroundColor = .black.withAlphaComponent(0.3)
@@ -109,8 +128,4 @@ struct SettingsView: View {
                UISegmentedControl.appearance()
                    .setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
     }
-}
-
-#Preview {
-    SettingsView()
 }

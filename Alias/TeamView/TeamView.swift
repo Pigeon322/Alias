@@ -90,7 +90,7 @@ struct TeamView: View {
     }
     
     private var continueButton: some View {
-        PlainButton(text: "Продолжить") {
+        PlainButton("Продолжить") {
             viewModel.destination = .category
         }
     }

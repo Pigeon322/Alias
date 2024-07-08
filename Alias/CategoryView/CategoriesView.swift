@@ -30,7 +30,7 @@ struct CategoriesView: View {
         .navigationDestination(for: $viewModel.destination) { destination in
             switch destination {
             case .settings:
-                SettingsView()
+                SettingsView(viewModel: SettingsViewModel(isBeforeStart: true))
             default:
                 EmptyView()
             }
@@ -48,7 +48,7 @@ struct CategoriesView: View {
     }
     
     private var continueButton: some View {
-        PlainButton(text: "Продолжить") {
+        PlainButton("Продолжить") {
             viewModel.destination = .settings
         }
     }

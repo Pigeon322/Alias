@@ -9,8 +9,18 @@ import SwiftUI
 
 struct PlainButton: View {
     var text: String = ""
-    var style: ButtonStyle = .next
+    var style: ButtonStyle
     var action: () -> () = { }
+    
+    init(
+        _ text: String,
+        style: ButtonStyle = .next,
+        action: @escaping () -> Void
+    ) {
+        self.text = text
+        self.style = style
+        self.action = action
+    }
     
     var body: some View {
             VStack {
@@ -35,8 +45,4 @@ extension PlainButton {
         case next
         case extra
     }
-}
-
-#Preview {
-    PlainButton()
 }

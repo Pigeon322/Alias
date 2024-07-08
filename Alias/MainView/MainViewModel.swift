@@ -18,4 +18,5 @@ enum Destination: Equatable {
     case settings
     case teams
     case category
+    case round
 }

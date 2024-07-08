@@ -20,7 +20,7 @@ struct ChoosePlayersView: View {
             
             buttonsStack
             
-            PlainButton(text: "Продолжить") {
+            PlainButton("Продолжить") {
                 viewModel.destination = .teams
             }
         }
