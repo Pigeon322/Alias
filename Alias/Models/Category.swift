@@ -10,6 +10,5 @@ import Foundation
 struct Category: Hashable {
     let name: String
     let icon: String
-    var isSelected: Bool
     let words: [String]
 }

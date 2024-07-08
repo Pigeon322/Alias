@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CategoryView: View {
     @State var category: Category
+    @EnvironmentObject var viewModel: CategoriesViewModel
     
     var body: some View {
         VStack {
@@ -23,7 +24,7 @@ struct CategoryView: View {
                 .stroke(.white, lineWidth: 5)
         }
         .overlay(alignment: .topTrailing) {
-            if category.isSelected {
+            if viewModel.selection.contains(category) {
                 Image(systemName: "checkmark")
                     .frame(width: 25, height: 25)
                     .foregroundColor(.white)

@@ -53,6 +53,7 @@ struct CategoriesView: View {
             viewModel.selection.contains(category) ? viewModel.removeCategory(category) : viewModel.insertCategory(category)
         } label: {
             CategoryView(category: category)
+                .environmentObject(viewModel)
         }
     }
     
