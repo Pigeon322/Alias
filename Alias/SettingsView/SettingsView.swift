@@ -46,7 +46,7 @@ struct SettingsView: View {
         .navigationDestination(for: $viewModel.destination) { destination in
             switch destination {
             case .round:
-                TeamView(viewModel: TeamViewModel(title: "Раунд #1", playersCount: <#T##Int#>)) // TODO: - сделать какой-то синглтон с настрйоками игры и передавать его вместо плеерс каунт
+                TeamView(viewModel: TeamViewModel(title: "Раунд #1", playersCount: 2)) // TODO: - сделать какой-то синглтон с настрйоками игры и передавать его вместо плеерс каунт
             default:
                 EmptyView()
             }
@@ -58,7 +58,10 @@ struct SettingsView: View {
             label(text: "Длительность раунда")
                         
             getSegmentedControl(
-                key: "RoundTime", tags: [30,60,90], selection: $viewModel.roundTime)
+                key: "RoundTime",
+                tags: [30,60,90],
+                selection: $viewModel.roundTime
+            )
         }
     }
     
@@ -66,7 +69,11 @@ struct SettingsView: View {
         VStack(spacing: 15) {
             label(text: "Очков для победы")
 
-            getSegmentedControl(key: "WinPoints", tags: [25,50,75,100], selection: $viewModel.winPoints)
+            getSegmentedControl(
+                key: "WinPoints",
+                tags: [25,50,75,100],
+                selection: $viewModel.winPoints
+            )
         }
     }
     
