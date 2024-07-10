@@ -53,7 +53,7 @@ struct TeamView: View {
         HStack {
             Image(systemName: "checkmark.circle.fill") // TODO: - Добавить картинки
               .resizable()
-              .frame(width: 40, height: 40) // put your sizes here
+              .frame(width: 40, height: 40)
               .foregroundColor(team.color)
             
             label(text: team.name)
